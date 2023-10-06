@@ -4,5 +4,13 @@ public class Articulo {
     private String NombreProducto;
     private String Descripcion;
     private float Precio;
+    public Articulo(float Peso,String NombreProducto,String Descripcion,float Precio){
+        this.Peso=Peso;
+        this.NombreProducto=NombreProducto;
+        this.Descripcion=Descripcion;
+        this.Precio=Precio;
+        
+
+    }
 
 }
