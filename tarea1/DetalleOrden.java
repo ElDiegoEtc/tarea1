@@ -18,4 +18,5 @@ package tarea1;
     public float calcPeso(){
         return (float) (cantidad * articulo.getPeso() * 0.81);
     }
+
 }
