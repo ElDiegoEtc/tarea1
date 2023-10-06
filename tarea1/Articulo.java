@@ -4,5 +4,4 @@ public class Articulo {
     private String NombreProducto;
     private String Descripcion;
     private float Precio;
-
 }
