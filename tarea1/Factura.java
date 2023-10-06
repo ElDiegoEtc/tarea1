@@ -1,2 +1,4 @@
-package PACKAGE_NAME;public class Factura {
+package tarea1;
+
+public class Factura extends DocTributario {
 }

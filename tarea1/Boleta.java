@@ -1,2 +1,2 @@
-package tarea1;public class Boleta {
+package tarea1;public class Boleta extends DocTributario {
 }

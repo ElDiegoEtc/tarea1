@@ -1,2 +1,2 @@
-package tarea1;public class Efectivo {
+package tarea1;public class Efectivo extends Pago {
 }
