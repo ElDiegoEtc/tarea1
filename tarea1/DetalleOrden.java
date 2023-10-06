@@ -1,38 +1,52 @@
 package tarea1;
-    public class DetalleOrden {
-    private int cantidad;
-    private float Iva;
-    private float PrecioTotal;
-    private float PrecioSinIVA;
+public class DetalleOrden {
     private Articulo articulo;
-    private float CalculoPeso;
-    public DetalleOrden (Articulo articulo, int cantidad){
+    private int cantidad;
+
+    public DetalleOrden(Articulo articulo, int cantidad) {
+        this.articulo = articulo;
         this.cantidad = cantidad;
+    }
+
+    //Metodo para calcular los subtotales de los productos
+    public double calcularSubtotal() {
+        return articulo.getPrecio() * cantidad;
+    }
+    //Metodo para el calculo del precio sin iva
+    public double PrecioSinIva(){
+        return articulo.getPrecio() * cantidad*0.81;
+    }
+    //Metodo para el calculo del iva
+    public double PrecioIva(){
+        return articulo.getPrecio() * cantidad*0.19;
+    }
+
+    // Getters y setters
+    public Articulo getArticulo() {
+        return articulo;
+    }
+
+    public void setArticulo(Articulo articulo) {
         this.articulo = articulo;
     }
-    public void calcPrecio(){
-        PrecioTotal=  cantidad * articulo.getPrecio();
+
+    public int getCantidad() {
+        return cantidad;
     }
 
-    public void calcPrecioSinIVA(){
-        PrecioSinIVA= (float) (cantidad * articulo.getPrecio() * 0.81);
-    }
-    public void calclIVA(){
-        Iva= (float) (cantidad * articulo.getPrecio() * 0.19);
-    }
-    public void calcPeso(){
-        CalculoPeso= (float) (cantidad * articulo.getPeso() * 0.81);
+    public void setCantidad(int cantidad) {
+        this.cantidad = cantidad;
     }
 
-        @Override
-        public String toString() {
-            return "DetalleOrden{" +
-                    "cantidad=" + cantidad +
-                    ", Iva=" + Iva +
-                    ", PrecioTotal=" + PrecioTotal +
-                    ", PrecioSinIVA=" + PrecioSinIVA +
-                    ", articulo=" + articulo +
-                    ", CalculoPeso=" + CalculoPeso +
-                    '}';
-        }
+    @Override
+    public String toString() {
+        return "DetalleOrden{" +
+                "articulo=" + articulo +
+                ", cantidad=" + cantidad +
+                ", subtotal sin Iva=" + PrecioSinIva() +
+                ", Iva=" + PrecioIva() +
+                ", subtotal=" + calcularSubtotal() +
+                "\n" +
+                '}';
     }
+}

@@ -10,28 +10,68 @@ public class OrdenCompra {
         this.fecha=fecha;
         this.estado=estado;
         this.cliente=cliente;
+        this.losdetalles = new ArrayList<>();
     }
     //metodo para agregar Detalle de orden al array list
     public void AgregaDetalle(DetalleOrden detalle){
        losdetalles.add(detalle);
     }
 
-    public float calcPrecio(){
+    public double Precio(){
         float total = 0;
         for (int i=0;i<losdetalles.size();i++ ){
             DetalleOrden detalle = losdetalles.get(i);
-            total = total + detalle.calcPrecio();
+            total = (float) (total + detalle.calcularSubtotal());
         }
         return total;
     }
-    /* hay que usar el calcPrecio para los 2 primeros
-    public float calcPrecioSinIVA(){
-        return (float) (cantidad * articulo.getPrecio() * 0.81);
+    //Metodo para el calculo del precio total de compra sin IVA
+public double CalPreciSinIva(){
+        double totalSinIva= Precio()*0.81;
+        return totalSinIva;
+}
+    //Metodo para el calculo del IVA
+    public double PrecioIva(){
+       double PrecioIva=Precio()*0.19;
+       return PrecioIva;
     }
-    public float calclIVA(){
-        return (float) (cantidad * articulo.getPrecio() * 0.19);
+    public ArrayList<DetalleOrden> getLosdetalles() {
+        return losdetalles ;
     }
-    public float calcPeso(){
-        return (float) (cantidad * articulo.getPeso() * 0.81);
-    }*/
+    //METODO PARA CALCULAR EL PESO TOTAL, HAREMOS UN FOR EACH
+    public double calcularPesoTotal() {
+        double pesoTotal = 0;
+        for (DetalleOrden detalle : losdetalles){
+            pesoTotal += detalle.getArticulo().getPeso() * detalle.getCantidad();
+        }
+        return pesoTotal;
+    }
+    //Getter y setters
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public Date getFecha() {
+        return fecha;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    @Override
+    public String toString() {
+        return "OrdenCompra{" +
+                "fecha=" + fecha +
+                ", estado='" + estado + '\'' +
+                ", cliente=" + cliente +
+                ", Total sin Iva='" + CalPreciSinIva()+ '\'' +
+                ", Total IVA='" + PrecioIva()+ '\'' +
+                ", Total PRECIO CON IVA='" + Precio()+ '\'' +
+
+                ", losdetalles=" + losdetalles  +
+                "\n" +
+                '}';
+    }
 }

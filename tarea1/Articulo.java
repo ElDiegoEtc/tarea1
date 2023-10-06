@@ -13,12 +13,43 @@ public class Articulo {
         this.Descripcion=Descripcion;
         this.Precio=Precio;
     }
-
+//GETTERS
     public float getPrecio() {
         return Precio;
     }
 
     public float getPeso() {
         return Peso;
+    }
+
+    public String getNombreProducto() {
+        return NombreProducto;
+    }
+    //SETTERS
+
+    public void setDescripcion(String descripcion) {
+        Descripcion = descripcion;
+    }
+
+    public void setNombreProducto(String nombreProducto) {
+        NombreProducto = nombreProducto;
+    }
+
+    public void setPeso(float peso) {
+        Peso = peso;
+    }
+
+    public void setPrecio(float precio) {
+        Precio = precio;
+    }
+
+    @Override
+    public String toString() {
+        return "Articulo{" +
+                "Peso=" + Peso +
+                ", NombreProducto='" + NombreProducto + '\'' +
+                ", Descripcion='" + Descripcion + '\'' +
+                ", Precio=" + Precio +
+                '}';
     }
 }
