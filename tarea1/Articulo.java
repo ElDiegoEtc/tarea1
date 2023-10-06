@@ -1,3 +1,6 @@
+/**
+ *
+ */
 package tarea1;
 public class Articulo {
     private float Peso;
