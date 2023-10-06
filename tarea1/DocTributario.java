@@ -1,2 +1,2 @@
-package tarea1 ;public class DocTributario {
+package tarea1 ;public abstract class DocTributario {
 }
