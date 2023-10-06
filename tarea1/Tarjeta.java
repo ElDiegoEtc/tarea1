@@ -1,2 +1,2 @@
-package PACKAGE_NAME;public class Tarjeta {
+package tarea1;public class Tarjeta {
 }

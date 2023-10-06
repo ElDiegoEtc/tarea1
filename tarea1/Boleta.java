@@ -1,2 +1,2 @@
-package PACKAGE_NAME;public class Boleta {
+package tarea1;public class Boleta {
 }

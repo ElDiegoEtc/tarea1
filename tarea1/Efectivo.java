@@ -1,2 +1,2 @@
-package PACKAGE_NAME;public class Efectivo {
+package tarea1;public class Efectivo {
 }

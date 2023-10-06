@@ -1,4 +1,4 @@
-package PACKAGE_NAME;
+package tarea1;
 public class Articulo {
     private float Peso;
     private String NombreProducto;

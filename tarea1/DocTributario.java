@@ -1,2 +1,2 @@
-package PACKAGE_NAME;public class DocTributario {
+package tarea1 ;public class DocTributario {
 }

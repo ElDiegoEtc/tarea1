@@ -1,2 +1,2 @@
-package PACKAGE_NAME;public class DetalleOrden {
+package tarea1;public class DetalleOrden {
 }
