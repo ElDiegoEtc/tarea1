@@ -9,9 +9,13 @@ public class Articulo {
         this.NombreProducto=NombreProducto;
         this.Descripcion=Descripcion;
         this.Precio=Precio;
-<<<<<<< HEAD
-
-
     }
 
+    public float getPrecio() {
+        return Precio;
+    }
+
+    public float getPeso() {
+        return Peso;
+    }
 }
