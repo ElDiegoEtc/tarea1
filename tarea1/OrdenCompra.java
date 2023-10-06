@@ -62,16 +62,19 @@ public double CalPreciSinIva(){
 
     @Override
     public String toString() {
-        return "OrdenCompra{" +
-                "fecha=" + fecha +
-                ", estado='" + estado + '\'' +
-                ", cliente=" + cliente +
-                ", Total sin Iva='" + CalPreciSinIva()+ '\'' +
-                ", Total IVA='" + PrecioIva()+ '\'' +
-                ", Total PRECIO CON IVA='" + Precio()+ '\'' +
+        String result = "Orden de Compra\n";
+        result += "Fecha: " + fecha + "\n";
+        result += "Estado: " + estado + "\n";
+        result += "Cliente: " + cliente + "\n";
+        result += "Total sin Iva: " + CalPreciSinIva() + "\n";
+        result += "Total IVA: " + PrecioIva() + "\n";
+        result += "Total PRECIO CON IVA: " + Precio() + "\n";
 
-                ", losdetalles=" + losdetalles  +
-                "\n" +
-                '}';
-    }
-}
+        result += "Detalles de la Orden:\n";
+        for (DetalleOrden detalle : losdetalles) {
+            result += detalle + "\n";
+        }
+
+        return result;
+}}
+
