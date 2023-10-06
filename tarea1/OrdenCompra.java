@@ -61,6 +61,7 @@ public double CalPreciSinIva(){
     }
 
     @Override
+    //hemos usado esta opcion para to string para una mejor visualizacion de resultados y estetica
     public String toString() {
         String result = "Orden de Compra\n";
         result += "Fecha: " + fecha + "\n";
