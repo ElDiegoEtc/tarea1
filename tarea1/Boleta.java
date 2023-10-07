@@ -16,7 +16,7 @@ public class Boleta extends DocTributario {
 
     @Override
     public String obtenerDescripcionDocumento() {
-        return "Número de boleta: " + numeroBoleta+"\n"+ "RUt: "+ getRut()+"\n"+"Direccion: "+getDireccion()+"\n"+"Fecha: "+getFecha();
+        return "Número de boleta: " + numeroBoleta+"\n"+ "RUt: "+ getRut()+"\n"+"Direccion: "+getDireccion()+"\n";
 
     }
 }

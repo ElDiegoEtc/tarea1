@@ -77,7 +77,7 @@ public double CalPreciSinIva(){
 
         String result = "Orden de Compra\n";
         result += "Documento Tributario: " + documentoTributario.obtenerDescripcionDocumento() + "\n";
-        result += "Fecha: " + fecha + "\n";
+        result += "Fecha: " + documentoTributario.getFecha() + "\n";
         result += "Estado: " + estado + "\n";
         result += "Cliente: " + cliente + "\n";
         result += "Total sin Iva: " + CalPreciSinIva() + "\n";

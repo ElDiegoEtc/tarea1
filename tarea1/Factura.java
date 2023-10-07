@@ -15,7 +15,7 @@ public class Factura extends DocTributario {
 
     @Override
     public String obtenerDescripcionDocumento() {
-        return "Número de Factura:"+getNumeroFactura()+"\n"+ "RUt: "+ getRut()+"\n"+"Direccion: "+getDireccion()+"\n"+"Fecha: "+getFecha();
+        return "Número de Factura:"+getNumeroFactura()+"\n"+ "RUt: "+ getRut()+"\n"+"Direccion: "+getDireccion()+"\n";
 
     }
 }

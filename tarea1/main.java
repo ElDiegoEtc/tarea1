@@ -8,7 +8,7 @@ public class main {
         // Crea una instancia de Calendar y configura la fecha deseada (por ejemplo, 23 de marzo)
         Calendar calendar = Calendar.getInstance();
         calendar.set(Calendar.YEAR, 2023);
-        calendar.set(Calendar.MONTH, Calendar.MARCH); // Marzo es el tercer mes (0-indexed)
+        calendar.set(Calendar.MONTH, Calendar.MARCH); // Marzo es el tercer mes
         calendar.set(Calendar.DAY_OF_MONTH, 23);
 
         // Convierte el Calendar a un objeto Date
@@ -23,7 +23,7 @@ public class main {
         DetalleOrden D2 = new DetalleOrden(a2, 3);
 
         // Asigna el documento tributario al crear la OrdenCompra
-        OrdenCompra o1 = new OrdenCompra(null, "deuda", null, documento);
+        OrdenCompra o1 = new OrdenCompra(fechaEspecifica, "deuda", null, documento);
 
         o1.AgregaDetalle(D1);
         o1.AgregaDetalle(D2);
