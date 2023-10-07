@@ -6,11 +6,14 @@ public class OrdenCompra {
     private String estado;
     private Cliente cliente;
     private ArrayList<DetalleOrden> losdetalles;
-    public OrdenCompra(Date fecha, String estado, Cliente cliente){
+    private DocTributario documentoTributario;
+
+    public OrdenCompra(Date fecha, String estado, Cliente cliente, DocTributario documento){
         this.fecha=fecha;
         this.estado=estado;
         this.cliente=cliente;
         this.losdetalles = new ArrayList<>();
+        this.documentoTributario=documento;
     }
     //metodo para agregar Detalle de orden al array list
     public void AgregaDetalle(DetalleOrden detalle){
@@ -60,17 +63,26 @@ public double CalPreciSinIva(){
         return estado;
     }
 
+    public void setDocumentoTributario(DocTributario documentoTributario) {
+        this.documentoTributario = documentoTributario;
+    }
+
+    public DocTributario getDocumentoTributario() {
+        return documentoTributario;
+    }
+
     @Override
     //hemos usado esta opcion para to string para una mejor visualizacion de resultados y estetica
     public String toString() {
+
         String result = "Orden de Compra\n";
+        result += "Documento Tributario: " + documentoTributario.obtenerDescripcionDocumento() + "\n";
         result += "Fecha: " + fecha + "\n";
         result += "Estado: " + estado + "\n";
         result += "Cliente: " + cliente + "\n";
         result += "Total sin Iva: " + CalPreciSinIva() + "\n";
         result += "Total IVA: " + PrecioIva() + "\n";
         result += "Total PRECIO CON IVA: " + Precio() + "\n";
-
         result += "Detalles de la Orden:\n";
         for (DetalleOrden detalle : losdetalles) {
             result += detalle + "\n";
