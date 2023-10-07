@@ -8,7 +8,13 @@ public abstract class Pago {
         this.ordencompra = ordencompra;
         this.monto = monto;
     }
+
+    public Pago(double montoAPagar) {
+    }
+
     public Date getFechaOrdenCompra() {
         return ordencompra.getFecha();
     }
+    public abstract double calcularCambio(OrdenCompra ordenCompra);
+
 }

@@ -1,5 +1,11 @@
 package tarea1;
 public class Tarjeta extends Pago{
-    private String tipo;
-    private String NumTransaccion;
+    public Tarjeta(double montoAPagar) {
+        super(montoAPagar);
+    }
+
+    @Override
+    public double calcularCambio(OrdenCompra ordenCompra) {
+return 0;
+    }
 }
